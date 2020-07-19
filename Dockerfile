@@ -5,4 +5,4 @@ ADD check.txt /usr/share/nginx/html/
 ADD crash.sh /
 CMD /bin/bash /crash.sh
 
-HEALTHCHECK --interval=1s --timeout=5s --start-period=5s --retries=5 CMD wget -q --method=HEAD localhost/check.txt
+HEALTHCHECK --interval=1s --timeout=1s --start-period=1s --retries=3 CMD wget -q --method=HEAD localhost/check.txt
